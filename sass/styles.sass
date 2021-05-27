@@ -1,0 +1,202 @@
+@font-face
+	font-family: "Lato"
+	src: url("./fonts/LatoBold.woff2") format("woff2"), url("./fonts/LatoBold.woff") format("woff"), url("./fonts/LatoBold.ttf") format("truetype")
+
+@font-face
+	font-family: "Proxima Nova Rg"
+	src: url("./fonts/ProximaNova.woff2") format("woff2"), url("./fonts/ProximaNova.woff") format("woff"), url("./fonts/ProximaNova.ttf") format("truetype")
+
+@font-face
+	font-family: "Roboto"
+	src: url("./fonts/Roboto.woff2") format("woff2"), url("./fonts/Roboto.woff") format("woff"), url("./fonts/Roboto.ttf") format("truetype")
+
+body
+	margin: 0
+
+hr
+	margin: 0
+	border: none
+	height: 1px
+	background-color: #ECECF0
+
+.container
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 90px
+	font-family: "Lato", "Arial Unicode MS", sans-serif
+	color: #72757D
+	margin: 0 auto
+	min-width: 1181px
+
+	&__section
+		display: flex
+		align-items: center
+
+	&__item
+		font-size: 11pt
+
+.footer
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 90px
+	font-family: "Lato", "Arial Unicode MS", sans-serif
+	color: #72757D
+	min-width: 1181px
+	margin-top: 0
+	margin-left: auto
+	margin-right: auto
+
+	&__section
+		display: flex
+		align-items: center
+
+	&__item
+		font-size: 12pt
+
+	&__logo
+		position: relative
+		margin: 0 0 0 14px
+		background: url("img/ellipse.png")
+		width: 40px
+		height: 40px
+
+	&__overlay
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-right: -50%
+		transform: translate(-50%, -50%)
+
+.row
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: auto
+	padding: 0
+	max-width: 1181px
+
+.image
+	position: relative
+	display: flex
+	padding: 0 0 0 100px
+
+.frame
+	position: relative
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	color: #35373B
+	max-width: 480px
+	font-family: "Lato", "Arial Unicode MS", sans-serif
+
+	&__item
+		margin: 0
+		padding: 15px 0
+		min-width: 241px
+
+	&__title
+		font-size: 68pt
+
+	&__subtitle
+		font-size: 24pt
+
+	&__crosshead
+		font-size: 16pt
+
+		&_colortext
+			border-bottom: 1px solid black
+
+	&__rubric
+		color: #828282
+		font: 11pt "Proxima Nova Rg", "Arial", sans-serif
+
+		&_colortext
+			font: 11pt "Lato", "Arial Black", sans-serif
+
+	&__button
+		position: relative
+		width: 196px
+		height: 54px
+		border-radius: 6px
+		background: #4073FF
+		border: none
+		text-decoration: none
+		cursor: pointer
+
+		&::after
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-right: -50%
+			transform: translate(-50%, -50%)
+			content: attr(data-notPressed)
+			font-size: 11pt
+			color: #ffffff
+
+		&:hover, &:hover::after
+			background: #40A3FF
+
+	&__timer
+		margin: 0
+		padding: 50px 25px
+		font: 17pt "Roboto", "Arial", sans-serif
+		color: #4073FF
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	body
+		display: table
+		width: 100vw
+		height: 100vh
+
+	.container
+		display: table-cell
+		vertical-align: middle
+
+	.header, .footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 0 auto
+		padding:
+		max-width: 1181px
+
+	.image
+		padding: 70px 0 70px 100px
+
+@media (max-width: 1180px)
+	.header, .footer
+		padding: 0 5px
+		min-width: 0
+		margin-left: 0
+		margin-right: 0
+
+		&__section
+			padding: 0 5px
+
+		&__item
+			font-size: 9pt
+
+	.frame
+		padding: 0 10px
+		max-width: 1100px
+
+		&__item
+			min-width: 551px
+
+	.image
+		display: none
+
+@media (max-width: 650px)
+	.frame
+		max-width: 640px
+
+		&__item
+			min-width: 321px
