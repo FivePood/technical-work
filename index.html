@@ -7,44 +7,41 @@
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+    <header class="header">
+        <a href="https://google.com/" role="button">
+            <img src="css/img/gk-logo.png" width="191" height="42" alt=""/>
+        </a>
+        <span class="header__section">Поисковая система по всей недвижимости в России</span>
+    </header>
     <main class="container">
-        <header class="header">
-            <div class="header__section">
-                <div class="header__item">
-                    <img src="css/img/gk-logo.png" width="191" height="42" alt=""/>
-                </div>
-            </div>
-            <div class="header__section header__item">Поисковая система по всей недвижимости в России</div>
-        </header>
-        <hr>
-        <ul class="row">
-            <li class="frame">
+        <nav class="row">
+            <section class="frame">
                 <p class="frame__title frame__item">Ой!</p>
                 <p class="frame__subtitle frame__item">Вы застали нас врасплох!</p>
                 <p class="frame__crosshead frame__item">В данный момент наши специалисты <span class="frame__crosshead_colortext">работают над обновлением</span> программного обеспечения.</p>
                 <p class="frame__rubric frame__item">Период обновления по регламенту <span class="frame__rubric_colortext">— 30 минут,</span> но обычно происходит гораздо быстрее. Пожалуйста, наберитесь терпения и возвращайтесь через несколько минут.</p>
-                <a href="index.html" class="frame__button" role="button" aria-label="Обновление" data-notPressed="Обновить станицу"></a>
+                <a href="index.html" class="frame__button" role="button">Обновить станицу</a>
                 <p class="frame__timer">
                     <span class="minutes"></span> : <span class="seconds"></span>
                 </p>
-            </li>
-            <li class="image">
+            </section>
+            <div class="image">
                 <img src="css/img/1.png" width="600" alt=""/>
-            </li>
-        </ul>
-        <hr>
-        <footer class="footer">
-            <div class="footer__section footer__item">© Gorodkvadratov</div>
-            <div class="footer__section">
-                <a href="https://vk.com/" class="footer__logo" role="button">
-                    <img class="footer__overlay" src="css/img/vk-logo.png" alt=""/>
-                </a>
-                <a href="https://facebook.com/" class="footer__logo" role="button">
-                    <img class="footer__overlay" src="css/img/facebook-logo.png" alt=""/>
-                </a>
             </div>
-        </footer>
+        </nav>
+        <hr>
     </main>
+    <footer class="footer">
+        <span>© Gorodkvadratov</span>
+        <nav class="footer__section">
+            <a href="https://vk.com/" class="footer__logo" role="button">
+                <img class="footer__overlay" src="css/img/vk-logo.png" alt=""/>
+            </a>
+            <a href="https://facebook.com/" class="footer__logo" role="button">
+                <img class="footer__overlay" src="css/img/facebook-logo.png" alt=""/>
+            </a>
+        </nav>
+    </footer>
     <script src="scripts/index.js"></script>
 </body>
 </html>

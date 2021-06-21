@@ -12,54 +12,36 @@
 
 body
 	margin: 0
-
-hr
-	margin: 0
-	border: none
-	height: 1px
-	background-color: #ECECF0
-
-.container
-	overflow: hidden
 	display: flex
 	flex-direction: column
-	min-height: 100vh
 
 .header
 	display: flex
 	align-items: center
 	justify-content: space-between
 	height: 90px
-	font-family: "Lato", "Arial Unicode MS", sans-serif
+	font: 15px "Lato", "Arial Unicode MS", sans-serif
 	color: #72757D
 	margin: 0 auto
 	min-width: 1181px
-
-	&__section
-		display: flex
-		align-items: center
-
-	&__item
-		font-size: 11pt
+	min-height: 10vh
 
 .footer
 	display: flex
 	align-items: center
 	justify-content: space-between
 	height: 90px
-	font-family: "Lato", "Arial Unicode MS", sans-serif
+	font: 16px "Lato", "Arial Unicode MS", sans-serif
 	color: #72757D
 	min-width: 1181px
 	margin-top: 0
 	margin-left: auto
 	margin-right: auto
+	min-height: 10vh
 
 	&__section
 		display: flex
 		align-items: center
-
-	&__item
-		font-size: 12pt
 
 	&__logo
 		position: relative
@@ -75,6 +57,12 @@ hr
 		margin-right: -50%
 		transform: translate(-50%, -50%)
 
+.container
+	display: flex
+	flex-direction: column
+	min-height: 78vh
+	border: 1px solid #ECECF0
+
 .row
 	display: flex
 	align-items: center
@@ -86,7 +74,7 @@ hr
 .image
 	position: relative
 	display: flex
-	padding: 0 0 0 100px
+	margin: 0 0 0 100px
 
 .frame
 	position: relative
@@ -103,51 +91,40 @@ hr
 		min-width: 241px
 
 	&__title
-		font-size: 68pt
+		font-size: 90px
 
 	&__subtitle
-		font-size: 24pt
+		font-size: 32px
 
 	&__crosshead
-		font-size: 16pt
+		font-size: 20px
 
 		&_colortext
 			border-bottom: 1px solid black
 
 	&__rubric
 		color: #828282
-		font: 11pt "Proxima Nova Rg", "Arial", sans-serif
+		font: 15px "Proxima Nova Rg", "Arial", sans-serif
 
 		&_colortext
-			font: 11pt "Lato", "Arial Black", sans-serif
+			font: 15px "Lato", "Arial Black", sans-serif
 
 	&__button
-		position: relative
-		width: 196px
-		height: 54px
+		display: inline-block
 		border-radius: 6px
 		background: #4073FF
+		color: white
 		border: none
 		text-decoration: none
-		cursor: pointer
+		padding: 1rem 1.5rem
 
-		&::after
-			position: absolute
-			top: 50%
-			left: 50%
-			margin-right: -50%
-			transform: translate(-50%, -50%)
-			content: attr(data-notPressed)
-			font-size: 11pt
-			color: #ffffff
-
-		&:hover, &:hover::after
+		&:hover
 			background: #40A3FF
 
 	&__timer
 		margin: 0
 		padding: 50px 25px
-		font: 17pt "Roboto", "Arial", sans-serif
+		font: 22px "Roboto", "Arial", sans-serif
 		color: #4073FF
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
@@ -172,16 +149,13 @@ hr
 
 @media (max-width: 1180px)
 	.header, .footer
-		padding: 0 5px
 		min-width: 0
-		margin-left: 0
-		margin-right: 0
+		margin-left: 5px
+		margin-right: 5px
+		font-size: 12px
 
 		&__section
-			padding: 0 5px
-
-		&__item
-			font-size: 9pt
+			margin-left: 15px
 
 	.frame
 		padding: 0 10px
